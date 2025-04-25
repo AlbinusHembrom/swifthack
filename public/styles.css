@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -81,5 +81,106 @@
   
   .feature p {
     color: #555;
+  }
+   */
+
+   /* Reset and base styles */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  body, html {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100%;
+    background-color: #f5f6fa;
+  }
+  
+  /* Fixed Menubar */
+  .menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  .menu-links button {
+    color: #ddd;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    height: 100%;
+    margin-left: 20px;
+  }
+  
+  .menu-links button:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    align-self: center;
+  }
+  
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  /* Fixed Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 60px; /* below menubar */
+    left: 0;
+    width: 200px;
+    height: calc(100vh - 60px);
+    background-color: #3a3a3a;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar li {
+    margin: 15px 0;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .sidebar a:hover {
+    color: #aaa;
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 200px; /* space for sidebar */
+    margin-top: 60px;   /* space for menubar */
+    padding: 30px;
   }
   

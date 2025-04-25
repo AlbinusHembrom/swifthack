@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Corporate Cab Dashboard</title>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -27,10 +28,6 @@
         <p>Manage and monitor cab usage across branches</p>
       </header>
       
-      <section class="feature" id="multi-branch">
-        <h2>1. Multi-Branch Support</h2>
-        <p>Book cabs centrally or for specific office locations.</p>
-      </section>
       
       <section class="feature" id="scheduling">
         <h2>2. Automated Scheduling</h2>
@@ -53,12 +50,86 @@
       </section>
     </main>
   </div>
+  
+  
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menubar & Sidebar Layout</title>
+  <link rel="stylesheet" href="styles.css" />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <header class="menubar">
+    <div class="logo">MR.CABBIE Dashboard</div>
+    <nav class="menu-links">
+        <button title="Settings" onclick='document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); location.reload();});''><i style="font-size:25px;" class='fa fa-gear'></i></button>
+        <button title="Exit" onclick='document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); location.reload();});''><i style="font-size:25px;" class='fa fa-sign-out'></i></button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#managebranch">Manage Branches</a></li>
+        <li><a href="#">Schedule a Ride</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div id="map" style="height: 500px;"></div>
+      <section class="feature" id="managebranch">
+        <h2>Manage Branch</h2>
+        <p>Book cabs centrally or for specific office locations.</p>
+      </section>
+      
+    </main>
+  </div>
+
   <script>
     if (document.cookie == 'allow_recepient=T'){
       console.log('Login Successful!!')
     } else {
       window.location.href = '/signin';
     }
+  </script>
+  <script>
+
+navigator.geolocation.getCurrentPosition(
+  (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    console.log('Your location:', latitude, longitude);
+    const map = L.map('map').setView([latitude, longitude], 13); // [lat, lng], zoom
+    
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add a marker
+    L.marker([latitude, longitude]).addTo(map)
+      .bindPopup('Hello from London!')
+      .openPopup();
+  },
+  (error) => {
+    console.error('Error getting location:', error);
+  }
+);
+
   </script>
 </body>
 </html>
