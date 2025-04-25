@@ -1,11 +1,64 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cab Management Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corporate Cab Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Welcome to the Corporate Cab Management Dashboard 🚖</h1>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2>Cab Dashboard</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Multi-Branch</a></li>
+          <li><a href="#">Scheduling</a></li>
+          <li><a href="#">Live Tracking</a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+      <header>
+        <h1>Corporate Cab Management Dashboard</h1>
+        <p>Manage and monitor cab usage across branches</p>
+      </header>
+      
+      <section class="feature" id="multi-branch">
+        <h2>1. Multi-Branch Support</h2>
+        <p>Book cabs centrally or for specific office locations.</p>
+      </section>
+      
+      <section class="feature" id="scheduling">
+        <h2>2. Automated Scheduling</h2>
+        <p>Schedule office commutes, airport drops, or other travel needs effortlessly.</p>
+      </section>
+      
+      <section class="feature" id="tracking">
+        <h2>3. Live Trip Tracking</h2>
+        <p>Track vehicles in real-time with driver details and ETA updates.</p>
+      </section>
+      
+      <section class="feature" id="reports">
+        <h2>4. Cost & Usage Reports</h2>
+        <p>Get detailed insights on departmental expenses and trip logs.</p>
+      </section>
+      
+      <section class="feature" id="feedback">
+        <h2>5. Employee Feedback</h2>
+        <p>Collect trip feedback with star ratings and reviews.</p>
+      </section>
+    </main>
+  </div>
+  <script>
+    if (document.cookie == 'allow_recepient=T'){
+      console.log('Login Successful!!')
+    } else {
+      window.location.href = '/signin';
+    }
+  </script>
 </body>
 </html>

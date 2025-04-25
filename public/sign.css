@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes example {
+    0% { background: url(
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACVJREFUGFdjZMAE/xnRxP4zMDAwIguCBUCKYIIwAbhKuAqoUf8BG0kHBAoUFDsAAAAASUVORK5CYII=
+           ) repeat, linear-gradient(0deg, #aaa, #777);}
+    25% { background: url(
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACVJREFUGFdjZMAE/xnRxP4zMDAwIguCBUCKYIIwAbhKuAqoUf8BG0kHBAoUFDsAAAAASUVORK5CYII=
+           ) repeat, linear-gradient(45deg, #aaa, #777);}
+    50% { background: url(
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACVJREFUGFdjZMAE/xnRxP4zMDAwIguCBUCKYIIwAbhKuAqoUf8BG0kHBAoUFDsAAAAASUVORK5CYII=
+           ) repeat, linear-gradient(90deg, #aaa, #777);}
+    75% { background: url(
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACVJREFUGFdjZMAE/xnRxP4zMDAwIguCBUCKYIIwAbhKuAqoUf8BG0kHBAoUFDsAAAAASUVORK5CYII=
+           ) repeat, linear-gradient(135deg, #aaa, #777);}
+    100% { background: url(
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACVJREFUGFdjZMAE/xnRxP4zMDAwIguCBUCKYIIwAbhKuAqoUf8BG0kHBAoUFDsAAAAASUVORK5CYII=
+           ) repeat, linear-gradient(180deg, #aaa, #777);}
+  }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  /* background: linear-gradient(135deg, #3498db, #2ecc71); */
+  background: url(
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAACVJREFUGFdjZMAE/xnRxP4zMDAwIguCBUCKYIIwAbhKuAqoUf8BG0kHBAoUFDsAAAAASUVORK5CYII=
+   ) repeat, linear-gradient(135deg, #aaa, #ddd);
+   /* animation-name: example;
+   animation-duration: 1s;
+   animation-delay: -2s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-box {
+  background: whitesmoke;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.login-box h2 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.login-box p {
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+.footer-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.footer-text a {
+  color: #3498db;
+  text-decoration: none;
+}
